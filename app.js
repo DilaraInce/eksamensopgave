@@ -3,8 +3,12 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
+var hbs = require('express-handlebars');
 const userRoutes = require('./Controller/UserController');
+
+app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '(views(layouts/'}));
+app.set ('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
 
 mongoose.connect(
     'mongodb+srv://DilaraInce:K45740103b@cluster0.zcld8.mongodb.net/Cluster0?retryWrites=true&w=majority',

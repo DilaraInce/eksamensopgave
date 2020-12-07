@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt')
+const checkAuth = require('../Middleware/check-auth');
 const User = require ("../model/user");
 
 router.post("/signup", (req, res, next) => {
@@ -23,7 +24,7 @@ router.post("/signup", (req, res, next) => {
               });
             } else {
               const user = new User({
-                _id: new mongoose.Types.ObjectId(),
+                _Id: new mongoose.Types.ObjectId(),
                 email: req.body.email,
                 password: hash
               });
@@ -66,7 +67,7 @@ router.post("/signup", (req, res, next) => {
             const token = jwt.sign(
               {
                 email: user[0].email,
-                userId: user[0]._id
+                userId: user[0]._Id
               },
               "secret",
               {
@@ -90,9 +91,29 @@ router.post("/signup", (req, res, next) => {
         });
       });
   });
+
+  router.get("/:userId", checkAuth, (req, res, next) => {
+    User.findById(req.params.userId)
+    .exec()
+    .then(use => {
+      console.log(user.email)
+      res.status(200).json({
+        message:"user found"
+      })
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  });
+
+  router.post("/u/:userId", checkAuth, (req, res, next) => {
+    User.findByIdAndUpdate(req.params.userId, {})
+    .exec()
+    .then()
+  });
     
-router.delete('/:userId', (req, res, next) => {
-    User.remove({_id: req.params.userId })
+router.post('/d/:userId', checkAuth, (req, res, next) => {
+    User.remove({_Id: req.params.userId })
     .exec()
     .then(result => {
         res.status(200).json({

@@ -4,11 +4,15 @@ const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     email: { 
         type: String, 
-        required: true, 
+        require: true, 
         unique: true, 
         match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
     },
-    password: { type: String, required: true} 
+
+    firstname: { type: String, require: true},
+    lastname: { type: String, require: true},
+    age: { type: String, require: true}, 
+    password: { type: String, require: true}
 });
 
 module.exports = mongoose.model('User', userSchema);
