@@ -1,0 +1,11 @@
+commit b94d7feeda2f1b714b5fe9acb10a4d95fc75c2f1
+Author: Dilara Ince <dilara@Dilaras-MacBook-Pro.local>
+Date:   Mon Dec 7 18:20:24 2020 +0100
+
+    jeg har nu lavet entoken
+
+commit 8ad817b37fffd2413b104f997faec57e671e4ca6
+Author: Dilara Ince <dilara@Dilaras-MacBook-Pro.local>
+Date:   Sun Dec 6 16:01:55 2020 +0100
+
+    tilføjet login
