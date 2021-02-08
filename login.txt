@@ -1,3 +1,9 @@
+commit 52c561fe8f564ad1ba50643d1ca461480834010f
+Author: Dilara Ince <dilara@Dilaras-MacBook-Pro.local>
+Date:   Mon Feb 8 16:34:36 2021 +0100
+
+    afsluttet min opgave
+
 commit b94d7feeda2f1b714b5fe9acb10a4d95fc75c2f1
 Author: Dilara Ince <dilara@Dilaras-MacBook-Pro.local>
 Date:   Mon Dec 7 18:20:24 2020 +0100
