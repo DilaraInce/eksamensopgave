@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path')
 const cookieParser = require('cookie-parser');
-
 const matchController = require('./Controller/MatchController');
 const userController = require('./Controller/UserController');
 

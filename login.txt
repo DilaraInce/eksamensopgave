@@ -1,3 +1,9 @@
+commit a2efdd1e5f7ac5a51f6f71e649e75f5ec2656c38
+Author: Dilara Ince <dilara@Dilaras-MacBook-Pro.local>
+Date:   Mon Feb 8 16:37:16 2021 +0100
+
+    Jeg har tilføjet html og css filer og opdateret dem
+
 commit 52c561fe8f564ad1ba50643d1ca461480834010f
 Author: Dilara Ince <dilara@Dilaras-MacBook-Pro.local>
 Date:   Mon Feb 8 16:34:36 2021 +0100
